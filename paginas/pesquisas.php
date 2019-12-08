@@ -4,9 +4,11 @@ if((!isset ($_SESSION['utilizador']) == true) and (!isset ($_SESSION['password']
 {
     unset($_SESSION['utilizador']);
     unset($_SESSION['password']);
-    header('location:login.php');
+    header('location:../login.php');
 }
+$login = $_SESSION['utilizador'];
 ?>
+
 <head>
     <meta charset="UTF-8">
     <title>Três Doces</title>
@@ -18,23 +20,23 @@ if((!isset ($_SESSION['utilizador']) == true) and (!isset ($_SESSION['password']
 </head>
 <body>
     <nav class="navbar navbar-dark bg-primary">
-        <a class="navbar-brand" href="index.php">Três Doces</a>
+        <a class="navbar-brand" href="../index.php">Três Doces</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.php">Início<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="../index.php">Início<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./paginas/bolos.php">Bolos</a>
+                    <a class="nav-link" href="./bolos.php">Bolos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./paginas/categorias.php">Categorias</a>
+                    <a class="nav-link" href="./categorias.php">Categorias</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./paginas/pesquisas.php">Pesquisas</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./pesquisas.php">Pesquisas</a>
                 </li>
             </ul>
         </span>
